@@ -1,5 +1,6 @@
 ﻿using System;
 
+
 namespace RefactoringSample1
 {
     class Program
@@ -7,7 +8,7 @@ namespace RefactoringSample1
         static void Main(string[] args)
         {
             Console.WriteLine("Test space.");
-            Program.testSpace();
+            testSpace();
         }
         private Movie _movie;
 
@@ -40,21 +41,7 @@ namespace RefactoringSample1
 
             var htmlStatement = customer.HtmlStatement();
             Console.WriteLine(htmlStatement);
-            /*
-            string movieName = "The Lion King";
-            int movieType = Movie.CHILDRENS;
-            string costumer = "Ole Martin";
-            int daysRented = 5;
-            Program program = new Program(movieName, movieType);
-            Movie movie = program._movie;
-            Console.WriteLine("Title: " + movie.GetTitle());
-            Console.WriteLine("Movie type: " + movie.GetPriceCode());
-            Console.WriteLine("Days rented: " + daysRented);
-            Console.WriteLine("Total charge: " + movie.GetCharge(daysRented));
-            Console.WriteLine("Total frequent points: " + movie.GetFrequentPoints(daysRented));
-            */
 
         }
-
     }
 }

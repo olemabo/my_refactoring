@@ -23,10 +23,13 @@ namespace RefactoringSample1.Tests
 			customer.AddRental(rental1);
 			customer.AddRental(rental2);
 			var statement = customer.Statement();
+			var htmlStatement = customer.HtmlStatement();
 			var totalAmount = customer.GetTotalCharge();
 			var frequentRenterPoints = customer.GetFrequentPoints();
 			Assert.Equal(totalAmount, totalAmt);
 			Assert.Equal(frequentRenterPoints, freqPoints);
+			// just added a small check to see if the html statement is different from the normal statement
+			Assert.NotEqual(statement, htmlStatement);
 		}
 
 		// Method to return rental data that is strongly typed while you add testdata
