@@ -4,14 +4,25 @@ using System.Text;
 
 namespace RefactoringSample1
 {
+	/// <summary>
+	/// The Customer class will be a class containing information about the rental behaviour of a costumer.   
+	/// </summary>
 	public class Customer
 	{
 		private string _name;
 		private List<Rental> _rentals = new List<Rental>();
+		/// <summary>
+		/// constructor initializing the name of the costumer
+		/// </summary>
+		/// <param name="name">the string name of the costumer</param>
 		public Customer(string name)
 		{
 			_name = name;
 		}
+		/// <summary>
+		/// 
+		/// </summary>
+		/// <param name="rent"></param>
 		public void AddRental(Rental rent)
 		{
 			_rentals.Add(rent);
@@ -45,6 +56,10 @@ namespace RefactoringSample1
 			return result;
 		}
 
+		/// <summary>
+		/// Function 
+		/// </summary>
+		/// <returns>s</returns>
 		public string Statement()
 		{
 			var result = $"Rental Record for {GetName()}\n";

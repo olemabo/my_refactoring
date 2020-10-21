@@ -13,7 +13,7 @@ namespace RefactoringSample1
 
         public override double GetCharge(int daysRented)
         {
-            return daysRented * 3;
+            return daysRented * 4;
         }
     }
 }
