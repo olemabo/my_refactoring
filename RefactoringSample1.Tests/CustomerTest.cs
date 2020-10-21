@@ -10,7 +10,8 @@ namespace RefactoringSample1.Tests
 			{
 				new Movie("The Lion King", Movie.CHILDRENS),
 				new Movie("Joker", Movie.NEW_RELEASE),
-				new Movie("Avengers: Endgame", Movie.REGULAR)
+				new Movie("Avengers: Endgame", Movie.REGULAR),
+				new Movie("Parasite", Movie.INTERNATIONAL)
 			};
 
 		// Strongly typed test with memberdata
@@ -24,7 +25,6 @@ namespace RefactoringSample1.Tests
 			var statement = customer.Statement();
 			var totalAmount = customer.GetTotalCharge();
 			var frequentRenterPoints = customer.GetFrequentPoints();
-
 			Assert.Equal(totalAmount, totalAmt);
 			Assert.Equal(frequentRenterPoints, freqPoints);
 		}
@@ -36,7 +36,10 @@ namespace RefactoringSample1.Tests
 				{ new Rental(_movies[0], 4), new Rental(_movies[1], 2), 9, 3 },
 				{ new Rental(_movies[2], 2), new Rental(_movies[0], 3), 3.5, 2 },
 				{ new Rental(_movies[1], 2), new Rental(_movies[2], 3), 9.5, 3 },
-				{ new Rental(_movies[1], 4), new Rental(_movies[1], 3), 21, 4 }
+				{ new Rental(_movies[1], 4), new Rental(_movies[1], 3), 21, 4 },
+				{ new Rental(_movies[0], 5), new Rental(_movies[1], 2), 10.5, 3 },
+				{ new Rental(_movies[3], 2), new Rental(_movies[2], 3), 11.5, 2 },
+				{ new Rental(_movies[3], 4), new Rental(_movies[3], 3), 28, 2 }
 			};
 		}
 	}
