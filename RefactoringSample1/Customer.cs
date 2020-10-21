@@ -19,19 +19,29 @@ namespace RefactoringSample1
 		{
 			_name = name;
 		}
+
 		/// <summary>
-		/// 
+		/// Add a rental to the _rentals list.
 		/// </summary>
-		/// <param name="rent"></param>
+		/// <param name="rent">Rental: renting object</param>
 		public void AddRental(Rental rent)
 		{
 			_rentals.Add(rent);
 		}
+
+		/// <summary>
+		/// Get the name of the customer
+		/// </summary>
+		/// <returns>string: the name of the customer</returns>
 		public string GetName()
 		{
 			return _name;
 		}
 
+		/// <summary>
+		/// Get the total charge associated with a renting object
+		/// </summary>
+		/// <returns>double: total charge of renting</returns>
 		public double GetTotalCharge()
 		{
 			double result = 0;
@@ -44,6 +54,10 @@ namespace RefactoringSample1
 			return result;
 		}
 
+		/// <summary>
+		/// Get the total frequent points associated with a renting object
+		/// </summary>
+		/// <returns>double: total number of frequent points of renting</returns>
 		public int GetFrequentPoints()
 		{
 			int result = 0;
@@ -57,9 +71,9 @@ namespace RefactoringSample1
 		}
 
 		/// <summary>
-		/// Function 
+		/// Function creating a string statement of the rental record
 		/// </summary>
-		/// <returns>s</returns>
+		/// <returns>string: a rental record</returns>
 		public string Statement()
 		{
 			var result = $"Rental Record for {GetName()}\n";
@@ -76,6 +90,10 @@ namespace RefactoringSample1
 			return result;
 		}
 
+		/// <summary>
+		/// Function creating a string statement of the rental record in html
+		/// </summary>
+		/// <returns>string: a rental record in html</returns>
 		public string HtmlStatement()
 		{
 			var result = $"<h1>Rental Record for {GetName()}</h1>";
