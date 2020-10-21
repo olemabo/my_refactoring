@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RefactoringSample1
 {
-    abstract class Price
+    public abstract class Price
     {
         abstract public int GetPriceCode();
 

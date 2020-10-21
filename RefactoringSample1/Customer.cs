@@ -46,6 +46,7 @@ namespace RefactoringSample1
 		{
 			double result = 0;
 
+			// add charge for each rental 
 			foreach (Rental rental in _rentals)
 			{
 				result += Rental.GetCharge(rental);
@@ -62,6 +63,7 @@ namespace RefactoringSample1
 		{
 			int result = 0;
 
+			// add frequent points for each rental 
 			foreach (Rental rental in _rentals)
 			{
 				result += Rental.GetFrequentPoints(rental);
@@ -69,6 +71,10 @@ namespace RefactoringSample1
 
 			return result;
 		}
+
+		// Statement and Html statement are very similar, so maybe they could be connected somehow.
+		// however, it seems more clean to separate them at the moment. 
+
 
 		/// <summary>
 		/// Function creating a string statement of the rental record

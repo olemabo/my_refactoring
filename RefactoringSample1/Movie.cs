@@ -13,6 +13,10 @@ namespace RefactoringSample1
 		private string _title;
 		private Price _price;
 
+		// maybe create Movie subclasses (MovieChildren, MovieRegular) with different pricefunctions
+		// instead of Price classes? But it seems very nice with Prices so far. 
+
+
 		/// <summary>
 		/// Constructor initilizing a movie object with correct movie name and price object
 		/// corresponding to the given price code. 

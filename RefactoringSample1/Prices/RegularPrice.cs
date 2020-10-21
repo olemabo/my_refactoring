@@ -4,7 +4,7 @@ using System.Text;
 
 namespace RefactoringSample1
 {
-    class RegularPrice : Price
+    public class RegularPrice : Price
     {
         public override int GetPriceCode()
         {
